@@ -25,10 +25,14 @@ it("should navigate to the login page", () => {
 it("should navigate to the login page", () => {
     //positive test checking the login for an existing user
     cy.visit("https://app.moberries.com/login?redirectTo=%2F");
-    cy.get("input[type=email]").type("alina.ghetlergmail.com");
+    cy.get("input[type=email]").type("alina.ghetlerrrr@gmail.com");
     //write the email of the user
     cy.get("input[type=password]").type('isNotAmatch');
     //write the password of the user
+
     cy.get("button[type=submit]").click();
+    cy.contains('Forgot your password?');
+
     //click on the button
 });
+//<div class="position-fixed w-100 alert alert-danger fade show" role="alert"><div class="position-relative px-3 container"><div class="mr-3">Forgot your password? Please <a class="u" href="/password-recovery">click here</a> to recover.</div><span class="position-absolute close">×</span></div></div>
