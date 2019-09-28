@@ -37,8 +37,8 @@ it("should navigate to the login page", () => {
 });
 it("should navigate to the login page", () => {
     //positive test checking the login for an existing user
-    cy.visit("https://app.moberries.com/login?redirectTo=%2F");
-    cy.get("button[type=button]").contains("Linkedin").click();
+    cy.request("https://app.moberries.com/login?redirectTo=%2F");
+    cy.get("button[type=button]").contains("Linkedin");
     
 
     //click on the button
